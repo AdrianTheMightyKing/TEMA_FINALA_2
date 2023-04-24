@@ -1,0 +1,275 @@
+.topbar {
+  background-color: rgb(21, 21, 21);
+  color: rgb(255, 255, 255);
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar h1 {
+  font-size: 20px;/* Marimea fontului */
+  margin: 0;/* Marginile sunt setate la 0 */
+}
+
+.marquee {
+  display: none; 
+}
+
+@media (max-width: 767px) {
+  /* se ajusteaza automat pe dispozitivele mobile */
+  .topbar {
+    height: auto;
+  }
+
+  
+  .topbar h1 {
+    display: none; 
+  }
+
+  
+  .marquee {
+    display: block;
+    font-size: 16px;/* marimea fontului */
+    white-space: nowrap; /* textul va fi pe o singura linie si va fi derulat */
+    overflow: hidden;/* adaugam puncte de suspensie la finalul textului */
+    text-overflow: ellipsis; /* adaugam puncte de suspensie la finalul textului */
+    animation: marquee 10s linear infinite; /* definim animatia pentru textul alergator */
+  }
+  /*definim animatia pentru textul alergator*/
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);/*la inceput, textul va fi complet in afara ecranului la dreapta*/
+    }
+    100% {
+      transform: translateX(-100%);/*la final, textul va fi complet in afara ecranului la stanga*/
+    }
+  }
+}
+/* Logo-ul devine responsive */
+  .navbar-brand img {
+  max-width: 100%; 
+  max-height: 50px;
+  }
+  /* Setarile pentru sectiunea hero */
+  .hero {
+    background-image: url('https://i.imgur.com/fCdT9r9.png');/* imaginea de fundal */
+    background-size: cover;/* imaginea de fundal acopera intreaga sectiune */
+    background-position: center;/* imaginea de fundal este centrata */
+    height: 100vh;/* inaltimea sectiunii este egala cu inaltimea viewport-ului */
+    position: relative;/* sectiunea este pozitionata relativ in interiorul containerului */
+  }
+
+  #asd1 {
+    position: absolute;
+    top: 80%;
+    left: -15%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+  }
+#asd2 {
+    position: absolute;/* pozitionam imaginea relativ la sectiunea parinte */
+    top: 80%;/* pozitionam imaginea la 80% din inaltimea sectiunii parinte */
+    left: -15%;/* pozitionam imaginea la jumatatea latimii sectiunii parinte */
+    transform: translate(-50%, -50%);/* centram imaginea vertical si orizontal */
+    width: 80%;/* latimea imaginii */
+    max-width: 700px;/* latimea maxima a imaginii */
+    height: auto;/* inaltimea imaginii se va ajusta automat in functie de latimea imaginii */
+  }
+#asd3 {
+    position: absolute;
+    top: 80%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+  }
+#asd4 {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+  }
+#asd5 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    max-width: 700px;
+    height: auto;
+  }
+#asd6 {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 200%;
+    
+  }
+#asd7 {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 80%;
+    
+  }
+
+  /* Stilurile pentru textul din sectiunea hero */
+  .hero h1 {
+    font-size: black;
+    color:black;
+    text-align: center;/* centrarea textului titlului */
+    margin-top: 3rem;
+  }
+  
+  .hero p {
+    font-size: 2rem;/* marimea fontului pentru textul din sectiunea hero*/
+    color: rgb(15, 214, 225);/* // culoarea fontului pentru textul din sectiunea hero */
+    text-align: center;/* centrarea textului din sectiunea hero */
+    margin-bottom: 3rem;/* spatiul dintre textul din sectiunea hero si buton */
+  }
+  
+  .hero button {
+    display: block;/*  butonul se afiseaza ca bloc */
+    margin: 0 auto;/*  butonul este centrat orizontal */
+    padding: 1rem 2rem;/* dimensiunile padding-ului pentru buton */
+    background-color: #fff;/*  culoarea fundalului butonului */
+    border: none;/* eliminam marginile butonului */
+    border-radius: 2rem;/* adaugam colturile rotunjite pentru buton */
+    font-size: 1.5rem;/* marimea fontului pentru textul butonului */
+    color: #333;/* culoarea fontului pentru textul butonului */
+    cursor: pointer;/* cursorul devine de tip pointer cand mouse-ul se afla pe buton */
+    margin-bottom: 3rem;/*  spatiul dintre buton si textul din sectiunea hero */
+  }
+  /* Stilurile pentru sectiunea hero pentru dispozitivele mobile */
+  @media (max-width: 768px) {
+    /* Reducem inaltimea sectiunii hero */
+    .hero {
+      height: 50vh;
+    }
+  /* Schimbam dimensiunea fontului pentru titlu si marja de sus */
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+    }
+  /* Schimbam dimensiunea fontului pentru text si marja de jos */
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  /* Schimbam dimensiunea fontului si marja de jos pentru buton */
+    .hero button {
+      font-size: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    /* Modificam latimea imaginii mobile */
+    .moving-image{
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+  /* Stilurile pentru sectiunea contact */
+    .contact {
+      padding: 50px 0;/*adaugam spatiu de 50 de pixeli in partea de sus si jos a sectiunii */
+    }
+    
+    .contact h2 {
+      margin-bottom: 30px; /* adaugam un spatiu de 30 de pixeli intre titlul sectiunii si continutul de sub el */
+    }
+    
+    .contact p {
+      font-size: 18px; /* marimea fontului pentru paragrafe este de 18px */
+      line-height: 1.5; /* adaugam un spatiu de 1.5 intre liniile paragrafelor */
+    }
+    
+    .contact form {
+      margin-top: 50px; /* adaugam un spatiu de 50 de pixeli intre formular si continutul de deasupra lui */
+    }
+    
+    .contact label {
+      font-size: 16px; /* marimea fontului pentru etichete este de 16px */
+      font-weight: 600; /* setam greutatea fontului ca fiind bold */
+    }
+    
+    .contact input,
+    .contact textarea {
+      padding: 12px 20px; /* adaugam spatiu de 12 pixeli in partea de sus si de jos si de 20 de pixeli in partea stanga si dreapta */
+      font-size: 16px; /* marimea fontului pentru input si textarea este de 16px */
+      line-height: 1.5; /* adaugam un spatiu de 1.5 intre liniile input-urilor si ale textarelor */
+      border: 1px solid #ced4da; /* adaugam un chenar subtire in jurul input-urilor si ale textarelor */
+      border-radius: 4px; /* adaugam o margine rotunjita in jurul input-urilor si ale textarelor */
+      margin-bottom: 20px; /* adaugam un spatiu de 20 de pixeli intre input-uri si textarea-uri */
+    }
+    
+    .contact textarea {
+      resize: vertical; /* setam textarelor sa se poata mari in inaltime */
+    }
+    
+    .contact button[type="submit"] {
+      background-color: #007bff; 
+      color: #fff; 
+      border: none; /* eliminam chenarul din jurul butonului */
+      border-radius: 4px; /* adaugam o margine rotunjita in jurul butonului */
+      padding: 12px 20px; /* adaugam spatiu de 12 pixeli in partea de sus si de jos si de 20 de pixeli in partea stanga si dreapta */
+      font-size: 16px; 
+      cursor: pointer;
+    }
+    
+    .contact button[type="submit"]:hover {
+      background-color: #0069d9; /* schimbam culoarea de fundal pentru buton atunci cand se trece cu cursorul peste el */
+    }
+
+    footer {
+background-color: #f2f2f2; 
+padding: 20px; /* adauga un padding de 20px la elementul footer */
+display: flex; /* seteaza modul de afisare la flex */
+justify-content: space-between; /* pozisioneaza elementele la marginile laterale ale containerului */
+align-items: center; /* aliniaza elementele pe axa verticala la mijlocul containerului */
+}
+
+.footer-logo img {
+height: 50px; 
+}
+
+.footer-menu {
+list-style: none; /* elimina stilurile implicite ale listei */
+margin: 0;
+padding: 0; 
+}
+
+.footer-menu ul {
+margin: 0; /* elimina marginile implicite ale listei */
+padding: 0; /* elimina padding-ul implicite al listei */
+list-style: none; /* elimina stilurile implicite ale listei */
+font-size: 16px; 
+}
+
+.footer-menu li {
+display: inline-block; 
+margin-right: 10px; 
+}
+
+.footer-menu li:last-child {
+margin-right: 0; /* elimina spatiul dintre ultimul element si elementul anterior */
+}
+
+.footer-menu ul li a {
+color: #212529;
+text-decoration: none; 
+}
+
+#burger{
+width:20%;
+max-width: 700px;/* latimea maxima a imaginii */
+    height: auto;
+}
+#hut{
+max-width: 100px;
+    height: auto;
+}
